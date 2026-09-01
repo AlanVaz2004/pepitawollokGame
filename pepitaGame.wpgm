@@ -20,6 +20,9 @@ program PepitaGame {
 	keyboard.up().onPressDo({ pepita.mover(arriba)})
 	keyboard.down().onPressDo({ pepita.mover(abajo)})
 
+	keyboard.left().onPressDo({ silvestre.mover(izquierda)})
+	keyboard.right().onPressDo({ silvestre.mover(derecha)})
+	
 	const tick = game.tick(2000, { pepita.mover(abajo) }, false)
   	tick.start()
 
@@ -27,7 +30,6 @@ program PepitaGame {
   	game.onCollideDo(pepita, { pepita =>
     //elemento.subir()
     game.say(pepita, "Opa! Me llevé choque con silvestre!")
-	pepita.mover(arriba)
   	})
 
 	game.start()

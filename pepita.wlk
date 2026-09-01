@@ -3,7 +3,7 @@ import wollok.game.*
 object pepita {
 
 	var property energia = 1000 //El getter y setter solo lo necesito para testear
-	var position = game.origin()
+	var position = game.center()
 
 	method image() { //metodo necesario para wollok game
 		return "pepita.png"
@@ -16,7 +16,6 @@ object pepita {
 	method position(_position) { //el setter solo lo necesito para testear
 		position = _position 
 	}
-
 
 	// method text() { //metodo opcional para mostrar un texto en wollok game
 	// 	return energia.toString()
@@ -45,7 +44,6 @@ object pepita {
 		return 10 + distancia/10
   	}
 	
-
 	method mover(direccion) {
 		const nuevaPosition = direccion.siguiente(position) //No modifico la position en la primera linea porque volar podría lanzar error
 		self.volar(10) //asume que cada celda está a 10 km
