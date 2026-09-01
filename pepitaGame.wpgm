@@ -12,13 +12,23 @@ program PepitaGame {
 	game.boardGround("fondo2.jpg")
 
 	game.addVisual(pepita)
-	game.addVisual(alpiste)
+	//game.addVisual(alpiste)
 	game.addVisual(silvestre)
 
 	keyboard.left().onPressDo({ pepita.mover(izquierda)})
 	keyboard.right().onPressDo({ pepita.mover(derecha)})
 	keyboard.up().onPressDo({ pepita.mover(arriba)})
 	keyboard.down().onPressDo({ pepita.mover(abajo)})
+
+	const tick = game.tick(2000, { pepita.mover(abajo) }, false)
+  	tick.start()
+
+	 // Cuando el personaje colisione con la caja, el personaje habla y la caja se desplaza
+  	game.onCollideDo(pepita, { pepita =>
+    //elemento.subir()
+    game.say(pepita, "Opa! Me llevé choque con silvestre!")
+	pepita.mover(arriba)
+  	})
 
 	game.start()
 }

@@ -12,5 +12,7 @@ object silvestre{
         return position
     }
 
-    
+    method mover(direccion){
+        position = direccion.siguiente(position)
+    }
 }
