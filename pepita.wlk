@@ -2,7 +2,7 @@ import wollok.game.*
 
 object pepita {
 
-	var property energia = 100 //El getter y setter solo lo necesito para testear
+	var property energia = 1000 //El getter y setter solo lo necesito para testear
 	var position = game.origin()
 
 	method image() { //metodo necesario para wollok game
