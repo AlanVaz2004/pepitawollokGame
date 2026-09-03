@@ -18,4 +18,5 @@ object alpiste {
   method teChoque(otro) {
     //Esta vacio ya que solo es comido si se apreta c
   }
+  //Deberia ir aca el game.removeVisual para no darle demasiado poder a pepita y que hasta ahora solo el alpiste pueda desaparecer
 }
