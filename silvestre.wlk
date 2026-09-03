@@ -17,6 +17,6 @@ object silvestre{
     }
 
     method teChoque(otro){
-        otro.estaViva(false)
+        otro.estaViva(false) //mata a pepita en cuanto lo choca
     }
 }

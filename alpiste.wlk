@@ -16,6 +16,6 @@ object alpiste {
   }
 
   method teChoque(otro) {
-    
+    //Esta vacio ya que solo es comido si se apreta c
   }
 }
