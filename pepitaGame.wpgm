@@ -30,6 +30,7 @@ program PepitaGame {
   	game.onCollideDo(pepita, { pepita =>
     //elemento.subir()
     game.say(pepita, "Opa! Me llevé choque con silvestre!")
+	pepita.muere()
   	})
 
 	game.start()

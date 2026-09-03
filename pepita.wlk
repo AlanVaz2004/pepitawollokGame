@@ -2,7 +2,7 @@ import wollok.game.*
 
 object pepita {
 
-	var property energia = 1000 //El getter y setter solo lo necesito para testear
+	var property energia = 1000  //El getter y setter solo lo necesito para testear
 	var position = game.center()
 
 	method image() { //metodo necesario para wollok game
@@ -50,5 +50,7 @@ object pepita {
 		position = nuevaPosition //ahora si puedo modificar la posicion
 	}
 
+	method muere(){
+		return "pepita-gris.png"
+	}
 }
-
