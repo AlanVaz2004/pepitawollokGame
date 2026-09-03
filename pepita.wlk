@@ -58,5 +58,6 @@ object pepita {
 
 	method comer(alimento){
 		energia = energia + alimento.energiaQueDa()
+		game.removeVisual(alimento)
 	}
 }
