@@ -12,19 +12,21 @@ program PepitaGame {
 	game.boardGround("fondo2.jpg")
 
 	game.addVisual(pepita)
-	//game.addVisual(alpiste)
+	game.addVisual(alpiste)
 	game.addVisual(silvestre)
 
 	keyboard.left().onPressDo({ pepita.mover(izquierda)})
 	keyboard.right().onPressDo({ pepita.mover(derecha)})
 	keyboard.up().onPressDo({ pepita.mover(arriba)})
 	keyboard.down().onPressDo({ pepita.mover(abajo)})
+	keyboard.c().onPressDo({ pepita.comer(game.uniqueCollider(pepita))})
+
 
 	keyboard.left().onPressDo({ silvestre.mover(izquierda)})
 	keyboard.right().onPressDo({ silvestre.mover(derecha)})
 	
-	const tick = game.tick(2000, { pepita.mover(abajo) }, false)
-  	tick.start()
+	//const tick = game.tick(2000, { pepita.mover(abajo) }, false)
+  	//tick.start()
 
   	game.onCollideDo(pepita, { silvestre => //Cuando pepita colisiona con silvestre pasa esto 
     	game.say(pepita, "Opa! Me choque!")

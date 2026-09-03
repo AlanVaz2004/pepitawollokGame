@@ -55,4 +55,8 @@ object pepita {
 		self.volar(10) //asume que cada celda está a 10 km
 		position = nuevaPosition //ahora si puedo modificar la posicion
 	}
+
+	method comer(alimento){
+		energia = energia + alimento.energiaQueDa()
+	}
 }
