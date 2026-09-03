@@ -26,11 +26,9 @@ program PepitaGame {
 	const tick = game.tick(2000, { pepita.mover(abajo) }, false)
   	tick.start()
 
-	 // Cuando el personaje colisione con la caja, el personaje habla y la caja se desplaza
-  	game.onCollideDo(pepita, { silvestre =>
-    //elemento.subir()
-    game.say(pepita, "Opa! Me llevé choque con silvestre!")
-	pepita.estaViva(false)
+  	game.onCollideDo(pepita, { silvestre => //Cuando pepita colisiona con silvestre pasa esto 
+    	game.say(pepita, "Opa! Me choque!")
+		pepita.estaViva(false)
   	})
 
 	game.start()

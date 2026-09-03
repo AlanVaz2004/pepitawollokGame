@@ -2,12 +2,13 @@ import wollok.game.*
 
 object pepita {
 
-	var property energia = 1000  //El getter y setter solo lo necesito para testear
+	var property energia = 100  //El getter y setter solo lo necesito para testear
 	var position = game.center()
 	var estaViva = true
 
 	method image() { //metodo necesario para wollok game
-		return if (estaViva) {"pepita.png"} else {"pepita-gris.png"}
+		return if (estaViva && energia > 10 ) 
+		{"pepita.png"} else {"pepita-gris.png"}
 	}
 
 	method position() { //metodo necesario para wollok game
