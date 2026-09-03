@@ -15,4 +15,8 @@ object silvestre{
     method mover(direccion){
         position = direccion.siguiente(position)
     }
+
+    method teChoque(otro){
+        otro.estaViva(false)
+    }
 }

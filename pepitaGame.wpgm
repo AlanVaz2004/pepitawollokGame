@@ -28,10 +28,13 @@ program PepitaGame {
 	//const tick = game.tick(2000, { pepita.mover(abajo) }, false)
   	//tick.start()
 
-  	/*game.onCollideDo(pepita, { silvestre => //Cuando pepita colisiona con silvestre pasa esto 
+  	game.onCollideDo(pepita, { otro =>   //Cuando pepita colisiona con otro objeto pasa esto 
     	game.say(pepita, "Opa! Me choque!")
-		pepita.estaViva(false)
-  	})*/
+
+		otro.teChoque(pepita)
+
+		
+  	})
 
 	game.start()
 }

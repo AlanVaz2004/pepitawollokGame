@@ -13,4 +13,8 @@ object alpiste {
   method energiaQueDa(){
     return 100
   }
+
+  method teChoque(otro) {
+    
+  }
 }
