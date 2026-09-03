@@ -30,10 +30,7 @@ program PepitaGame {
 
   	game.onCollideDo(pepita, { otro =>   //Cuando pepita colisiona con otro objeto pasa esto 
     	game.say(pepita, "Opa! Me choque!")
-
-		otro.teChoque(pepita)
-
-		
+		otro.teChoque(pepita) //al objeto que sea le pido un mensaje teChoque
   	})
 
 	game.start()
